@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for("static", filename= "style.css")}}" type="text/css" rel="stylesheet">
+    <title> To-Do Liste als Webapplikation </title>
+  </head>
+<body>
+    <h1> Meine To-Do Liste </h1>
+    <form action="/add" method="POST">
+      neue Aufgabe
+      <input type="text" name="todo" placeholder="neue Aufgabe eingeben" required>
+      <button id="button1" type="submit"> Hinzufügen </button>
+    </form>
+
+    <ul>
+      {% for todo in todos %}
+      <li>
+        <p class= "inline-text"> {{ todo.task }}
+        </p>
+        <form action="/delete/{{todo.id}}" method="POST">
+          <button id="button2" type="submit"> Löschen </button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+
+
+</body>
+
+</html>

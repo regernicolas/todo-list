@@ -1,0 +1,56 @@
+/*Grundlegendes Styling - Test*/
+
+body {
+    font-family: arial;
+    color: #000000;
+    text-align: center;
+
+}
+
+h1 {
+    text-decoration: underline;
+    font-size: 3em;
+}
+
+ul {
+    border-style: double;
+    border-width: thin;
+    block-size: auto;
+    
+}
+
+button#button1 {
+    color: #000000;
+    background: #00a754;
+    border-color: #000000;
+    border-style: solid;
+    border-width: thin;
+    text-indent: 2pt;
+}
+
+button#button2 {
+    color: #000000;
+    background: #e40038;
+    border-style: solid;
+    border-width: thin;
+    text-align: right;
+    margin-right: 20px;
+}
+
+li:nth-child(odd){
+    background: #e0e3e6;
+    margin-left: -40px;
+    text-indent: 10pt;
+    }
+
+li:nth-child(even){
+    background: #c1c7cc;
+    margin-left: -40px;
+    text-indent: 10pt;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
