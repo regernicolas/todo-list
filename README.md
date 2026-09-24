@@ -35,17 +35,18 @@ Die Anwendung ermöglicht es Benutzern:
 
 
 todo.app/
+
 ├── app.py				#Hauptanwendung
 
 ├── instance/				#Automatisch erstellt: Enthält todos.db
 
 ├── static/
 
-│   └── style.css			#CSS-Datei für das Layout
+│     └── style.css			#CSS-Datei für das Layout
 
 └── templstes/
 
-&#x20;   └──index.html			#HTML-Template für das Frontend
+&#x20;     └──index.html			#HTML-Template für das Frontend
 
 
 
