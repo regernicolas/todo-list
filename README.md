@@ -4,7 +4,7 @@
 
 
 
-1. ### Übersicht und Zielsetzung
+### 1\. Übersicht und Zielsetzung
 
 
 
@@ -178,7 +178,7 @@ Das Frontend nutzt die JINJA2-Template-Engine zur Generierung des HTML-Codes:
 
 
 
-1. ### Overview and Objectives
+### 1\. Overview and Objectives
 
 
 
@@ -277,7 +277,69 @@ python app.py
 
 Open a browser and navigate to:
 
-\[http://
+\[http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
-Translated with DeepL.com (free version)
 
+
+### 5. Database Model
+
+
+
+Data is stored relationally using SQLAlchemy in a local SQLite database (todos.db)
+
+
+
+```Python
+
+class Todo (db.Model):
+
+&#x20;   id = db.Column(db.Integer, primary_key = True)
+
+&#x20;   task = db.Column(db.String, nullable = False)
+
+```
+
+
+
+**Field Description:**
+
+* id (Integer, Primary Key): Unique identifier for each entry
+* task (String(200), nullable = False): The text entered for the task
+
+
+
+
+
+### 6. Interfaces and Routes
+
+
+
+|**Route**|**HTTP Method**|**Function**|**Description**|
+|-|-|-|-|
+|/|GET|index()|Loads all tasks from the database and renders index.html|
+|/add|POST|add_task()|Accepts data and saves new tasks to the database|
+|/delete(<int:todo_id>)|POST|delete_task()|Deletes the task with the specified id from the database|
+
+
+
+### 7. Frontend and Template Engines
+
+
+
+The frontend uses the JINJA2 template engine to generate the HTML code:
+
+
+
+* **Static inclusion**: The CSS file is linked via ```url_for(“static”, filename = “style.css”)```.
+* **Loops ({% for todo in todos %})**: Iterates (goes through element by element) over all records retrieved from the database and renders them as list items (<li>).
+* **POST forms**: Each action (add, delete) is embedded in a <form method="POST"> to securely send data to the server.
+
+
+
+### 8. Security and Best Practices
+
+
+
+* **SQL Injection Protection** through the use of the SQLAlchemy ORM. Values are parameterized, preventing direct SQL injections.
+* **404 Error Handling** by using `Todo.quer.get_or_404(todo_id)` to cleanly handle invalid requests
+* **App Context**: Database tables are created securely within the Flask app context (`with app.app_context():`)
