@@ -33,7 +33,7 @@ Die Anwendung ermöglicht es Benutzern:
 ### 3\. Projektstruktur
 
 
-
+```
 todo.app/
 
 ├── app.py				#Hauptanwendung
@@ -46,8 +46,8 @@ todo.app/
 
 └── templstes/
 
-             └──index.html			#HTML-Template für das Frontend
-
+     └──index.html			#HTML-Template für das Frontend
+```
 
 
 ### 4\. Installation und Inbetriebnahme
@@ -208,8 +208,9 @@ The application allows users to:
 ### 3\. Project Structure
 
 
-
+```
 todo.app/
+
 ├── app.py				#Main application
 
 ├── instance/                #Created automatically: Contains todos.db
@@ -220,8 +221,8 @@ todo.app/
 
 └── templates/
 
-&#x20;   └── index.html			#HTML template for the front end
-
+    └── index.html			#HTML template for the front end
+```
 
 
 ### 4. Installation and Setup
