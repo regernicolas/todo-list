@@ -158,8 +158,8 @@ Das Frontend nutzt die JINJA2-Template-Engine zur Generierung des HTML-Codes:
 
 
 * **Statisches Einbinden**: die CSS-Datei wird via ```url\_for("static", filename = "style.css")``` verknüpft.
-* **Schleifen ({% for todo in todos %})**: Iteriert (wird Element für Element durchgegangen) über alle abgerufenen Datensätze aus der Datenbank und rendert sie als Listenelemente (<li>).
-* **POST-Formulare**: Jede Aktion (Hinzufügen, Löschen) ist in ein <form method = "POST"> eingebettet, um Daten sicher an den Server zu senden.
+* **Schleifen ({% for todo in todos %})**: Iteriert (wird Element für Element durchgegangen) über alle abgerufenen Datensätze aus der Datenbank und rendert sie als Listenelemente ```(<li>)```.
+* **POST-Formulare**: Jede Aktion (Hinzufügen, Löschen) ist in ein ```<form method = "POST">``` eingebettet, um Daten sicher an den Server zu senden.
 
 
 
@@ -168,8 +168,8 @@ Das Frontend nutzt die JINJA2-Template-Engine zur Generierung des HTML-Codes:
 
 
 * **SQL\_Injection-Schutz** durch die Verwendung des SQLAlchemy-ORMs. Werte werden parametrisiert und direkte SQL-Injections verhindert.
-* **404-Fehlerbehandlung** durch Verwendung von Todo.quer.get\_or\_404(todo\_id), um ungültige Aufrufe sauber abzufangen
-* **App Context**: Das Anlegen der Datenbanktabellen erfolgt sicher innerhalb des Flask-App-Kontexts (with app.app\_context():)
+* **404-Fehlerbehandlung** durch Verwendung von ``` Todo.quer.get\_or\_404(todo\_id)```, um ungültige Aufrufe sauber abzufangen
+* **App Context**: Das Anlegen der Datenbanktabellen erfolgt sicher innerhalb des Flask-App-Kontexts ```(with app.app\_context():)```
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -333,8 +333,8 @@ The frontend uses the JINJA2 template engine to generate the HTML code:
 
 
 * **Static inclusion**: The CSS file is linked via ```url_for(“static”, filename = “style.css”)```.
-* **Loops ({% for todo in todos %})**: Iterates (goes through element by element) over all records retrieved from the database and renders them as list items (<li>).
-* **POST forms**: Each action (add, delete) is embedded in a <form method="POST"> to securely send data to the server.
+* **Loops ({% for todo in todos %})**: Iterates (goes through element by element) over all records retrieved from the database and renders them as list items ```(<li>)```.
+* **POST forms**: Each action (add, delete) is embedded in a ```<form method="POST">``` to securely send data to the server.
 
 
 
@@ -343,5 +343,5 @@ The frontend uses the JINJA2 template engine to generate the HTML code:
 
 
 * **SQL Injection Protection** through the use of the SQLAlchemy ORM. Values are parameterized, preventing direct SQL injections.
-* **404 Error Handling** by using `Todo.quer.get_or_404(todo_id)` to cleanly handle invalid requests
-* **App Context**: Database tables are created securely within the Flask app context (`with app.app_context():`)
+* **404 Error Handling** by using ``` `Todo.quer.get_or_404(todo_id)` ```to cleanly handle invalid requests
+* **App Context**: Database tables are created securely within the Flask app context ```(`with app.app_context():`)```
