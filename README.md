@@ -4,7 +4,7 @@
 
 
 
-###1. Übersicht und Zielsetzung
+1. ### Übersicht und Zielsetzung
 
 
 
@@ -170,5 +170,114 @@ Das Frontend nutzt die JINJA2-Template-Engine zur Generierung des HTML-Codes:
 * **404-Fehlerbehandlung** durch Verwendung von Todo.quer.get\_or\_404(todo\_id), um ungültige Aufrufe sauber abzufangen
 * **App Context**: Das Anlegen der Datenbanktabellen erfolgt sicher innerhalb des Flask-App-Kontexts (with app.app\_context():)
 
+---------------------------------------------------------------------------------------------------------------
 
+# Project Documentation: Flask To-Do Web Application
+
+
+
+
+
+1. ### Overview and Objectives
+
+
+
+The application allows users to:
+
+* Enter and save new tasks
+* Delete tasks that have already been completed
+* View an overview of all saved tasks
+
+
+
+### 2. Tech Stack
+
+|**Component**|**Technology**|**Description**|
+|-|-|-|
+|Backend|Python 3.14|Programming language|
+|Framework|Flask|Micro web framework|
+|Database|Flask-SQLAlchemy / SQLite|Relational database for persistent storage|
+|Frontend|HTML5 (Jinja2 Templates)|Structuring and dynamic rendering of content|
+|Styling|CSS3|Visual design|
+
+
+
+
+
+### 3\. Project Structure
+
+
+
+todo.app/
+├── app.py				#Main application
+
+├── instance/                #Created automatically: Contains todos.db
+
+├── static/
+
+│   └── style.css            #CSS file for the layout
+
+└── templates/
+
+&#x20;   └── index.html			#HTML template for the front end
+
+
+
+### 4. Installation and Setup
+
+
+
+**Prerequisites:** Python 3.8+ installed on your system
+
+
+
+
+##### **Step-by-Step Instructions**
+
+
+**1. Create and activate a virtual environment:**
+```Bash
+
+\# macOS / Linux
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+
+
+\# Windows
+
+python -m venv venv
+
+venv\\Scripts\\activate
+
+```
+
+
+**2. Install dependencies:**
+
+```Bash
+
+pip install flask flask-sqlalchemy
+
+```
+
+
+**3. Run the application:**
+
+```Bash
+
+python app.py
+
+```
+
+
+**4. Access the website:**
+
+Open a browser and navigate to:
+
+\[http://
+
+Translated with DeepL.com (free version)
 
