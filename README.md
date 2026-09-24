@@ -44,7 +44,7 @@ todo.app/
 
 │     └── style.css			#CSS-Datei für das Layout
 
-└── templstes/
+└── templates/
 
      └──index.html			#HTML-Template für das Frontend
 ```
