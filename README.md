@@ -120,9 +120,9 @@ Die Speicherung erfolgt relational über SQLAlchemy in einer lokalen SQLite-Date
 
 class Todo (db.Model):
 
-&#x20;   id = db.Column(db.Integer, primary\_key = True)
+     id = db.Column(db.Integer, primary\_key = True)
 
-&#x20;   task = db.Column(db.String, nullable = False)
+     task = db.Column(db.String, nullable = False)
 
 ```
 
@@ -295,9 +295,9 @@ Data is stored relationally using SQLAlchemy in a local SQLite database (todos.d
 
 class Todo (db.Model):
 
-&#x20;   id = db.Column(db.Integer, primary_key = True)
+     id = db.Column(db.Integer, primary_key = True)
 
-&#x20;   task = db.Column(db.String, nullable = False)
+     task = db.Column(db.String, nullable = False)
 
 ```
 
