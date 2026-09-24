@@ -46,7 +46,7 @@ todo.app/
 
 └── templstes/
 
-&#x20;     └──index.html			#HTML-Template für das Frontend
+             └──index.html			#HTML-Template für das Frontend
 
 
 
