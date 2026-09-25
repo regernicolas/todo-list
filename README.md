@@ -307,7 +307,7 @@ class Todo (db.Model):
 **Field Description:**
 
 * id (Integer, Primary Key): Unique identifier for each entry
-* task (String(200), nullable = False): The text entered for the task
+* task (String, nullable = False): The text entered for the task
 * created_at (DateTime, default = datetime.now): Date the task was created
 * completed (Boolean, default = False): The task is (not) completed
 
