@@ -10,10 +10,10 @@
 
 Die Anwendung ermöglicht es Benutzern:
 
-* Neue Aufgaben einzutragen und abzuspeichern
+* Neue Aufgaben einzutragen und abzuspeichern (mit Erstellungsdatum)
 * Aufgaben, die bereits erledigt sind, zu löschen
 * Eine Übersicht aller gespeicherten Aufgaben anzuzeigen
-
+* Eine Aufgabe als ereldigt zu markieren
 
 
 ### 2\. Tech-Stack
@@ -131,8 +131,9 @@ class Todo (db.Model):
 **Feldbeschreibung:**
 
 * id (Integer, Primary Key): Eindeutiger Identifikator für jeden Eintrag
-* task (String(200), nullable = False): Der eingegebene Text der Aufgabe
-
+* task (String, nullable = False): Der eingegebene Text der Aufgabe
+* created_at (DateTime, defautl = datetime.now): Erstellungsdatum der Aufgabe
+* completed (Boolean, default = False): Aufgabe ist (nicht) erledigt
 
 
 
@@ -185,10 +186,10 @@ Das Frontend nutzt die JINJA2-Template-Engine zur Generierung des HTML-Codes:
 
 The application allows users to:
 
-* Enter and save new tasks
+* Enter and save new tasks (with creation date)
 * Delete tasks that have already been completed
 * View an overview of all saved tasks
-
+* Mark a task as completed
 
 
 ### 2. Tech Stack
@@ -307,7 +308,8 @@ class Todo (db.Model):
 
 * id (Integer, Primary Key): Unique identifier for each entry
 * task (String(200), nullable = False): The text entered for the task
-
+* created_at (DateTime, default = datetime.now): Date the task was created
+* completed (Boolean, default = False): The task is (not) completed
 
 
 
