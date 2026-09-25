@@ -146,7 +146,7 @@ class Todo (db.Model):
 |-|-|-|-|
 |/|GET|index()|Lädt alle Aufgaben aus der Datenbank und rendert index.html|
 |/add|POST|add\_task()|Nimmt Daten entgegen und speichert neue Aufgaben in der Datenbank|
-|/delete(<int:todo_id>|POST|delete\_task(todo_id)|Löscht die Aufgabe mit der passenden id aus der Datenbank|
+|/delete/<int:todo_id>|POST|delete\_task(todo_id)|Löscht die Aufgabe mit der passenden id aus der Datenbank|
 |/toggle/<int:todo_id>|POST|toggle_task(todo_id)|Schaltet den Status(erledigt/offen) der Aufgabe mit der passenden ID um und speichert die Änderung in der Datenbank|
 
 
@@ -322,7 +322,7 @@ class Todo (db.Model):
 |-|-|-|-|
 |/|GET|index()|Loads all tasks from the database and renders index.html|
 |/add|POST|add_task()|Accepts data and saves new tasks to the database|
-|/delete(<int:todo_id>)|POST|delete_task(todo_id)|Deletes the task with the specified id from the database|
+|/delete/<int:todo_id>|POST|delete_task(todo_id)|Deletes the task with the specified id from the database|
 |/toggle/<int:todo_id>|POST|toggle_task(todo_id)|Toggles the status (completed/pending) of the task with the specified ID and saves the change to the database|
 
 
