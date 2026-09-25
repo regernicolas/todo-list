@@ -13,7 +13,7 @@ Die Anwendung ermöglicht es Benutzern:
 * Neue Aufgaben einzutragen und abzuspeichern (mit Erstellungsdatum)
 * Aufgaben, die bereits erledigt sind, zu löschen
 * Eine Übersicht aller gespeicherten Aufgaben anzuzeigen
-* Eine Aufgabe als ereldigt zu markieren
+* Eine Aufgabe als erledigt zu markieren
 
 
 ### 2\. Tech-Stack
