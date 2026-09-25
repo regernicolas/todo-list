@@ -16,8 +16,19 @@
     <ul>
       {% for todo in todos %}
       <li>
-        <p class= "inline-text"> {{ todo.task }}
-        </p>
+
+        <form action="{{url_for("toggle_task", todo_id=todo.id)}}" method="POST">
+          <input 
+          type="checkbox"
+          onchange="this.form.submit()"
+          {%if todo.completed%} checked {%endif%}
+          >
+          <label for="task" class="todo-text"> Aufgabe erledigt </label>
+        </form>
+
+        <p class= "inline-text"> {{ todo.task }}</p>
+        <p> <small>({{todo.created_at.strftime("erstellt am %d.%m.%y")}}) </small></p>
+
         <form action="/delete/{{todo.id}}" method="POST">
           <button id="button2" type="submit"> Löschen </button>
         </form>
