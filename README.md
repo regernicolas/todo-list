@@ -36,7 +36,7 @@ Die Anwendung ermöglicht es Benutzern:
 ```
 todo.app/
 
-├── app.py				   #Hauptanwendung
+├── app.py				#Hauptanwendung
 
 ├── instance/				#Automatisch erstellt: Enthält todos.db
 
@@ -212,7 +212,7 @@ The application allows users to:
 ```
 todo.app/
 
-├── app.py				   #Main application
+├── app.py			    #Main application
 
 ├── instance/                #Created automatically: Contains todos.db
 
